@@ -1,0 +1,75 @@
+{
+  package: "com.zap.devil.parser.impl",
+  class: "DevilSqlParserImpl",
+
+  imports: [
+    "com.zap.devil.parser.dql.SqlShowDatabases"
+    "org.apache.calcite.sql.SqlAlienSystemTypeNameSpec"
+    "org.apache.calcite.sql.SqlCreate"
+    "org.apache.calcite.sql.SqlDrop"
+    "java.util.List"
+    "java.util.ArrayList"
+  ]
+
+  keywords: [
+    "DATABASES"
+    "COMMENT"
+    "IF"
+    "METADATA"
+    "OVERWRITE"
+  ]
+
+  nonReservedKeywords: [
+    "ADMIN"
+  ]
+
+  # keywordsToAdd中存在的key要现在keywords中定义
+  nonReservedKeywordsToAdd: [
+    "IF"
+    "METADATA"
+    "OVERWRITE"
+  ]
+
+  nonReservedKeywordsToRemove: [
+  ]
+
+  statementParserMethods: [
+    "SqlShowDatabases()"
+  ]
+
+  literalParserMethods: [
+  ]
+
+  dataTypeParserMethods: [
+  ]
+
+  builtinFunctionCallMethods: [
+  ]
+
+  alterStatementParserMethods: [
+  ]
+
+  createStatementParserMethods: [
+  ]
+
+  dropStatementParserMethods: [
+  ]
+
+  binaryOperatorsTokens: [
+  ]
+
+  extraBinaryExpressions: [
+  ]
+
+  implementationFiles: [
+    "parserImpls.ftl"
+  ]
+
+  joinTypes: [
+  ]
+
+  includePosixOperators: false
+  includeCompoundIdentifier: true
+  includeBraces: true
+  includeAdditionalDeclarations: false
+}
